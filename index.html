@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harikrishna T S | DevOps Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Existing CSS from the original file - unchanged to preserve theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 14px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #181a1b 0%, #232526 100%);
+            color: #b0b3b8;
+            line-height: 1.6;
+            min-height: 100vh;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #232526 0%, #181a1b 100%);
+            border-radius: 10px;
+            border: 1px solid #232526;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .badge {
+            padding: 0.18rem 0.7rem;
+            border-radius: 16px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Badge colors - adjusted for a more general DevOps theme */
+        .badge-course { background: #232526; color: #4ecdc4; border: 1px solid #4ecdc4; }      /* Cyan - for 'Domain' */
+        .badge-semester { background: #232526; color: #3b82f6; border: 1px solid #3b82f6; }    /* Blue - for 'Focus' */
+        .badge-status { background: #232526; color: #f97316; border: 1px solid #f97316; }       /* Orange - for 'Status' */
+        .badge-contributions { background: #232526; color: #cddc39; border: 1px solid #cddc39; }/* Lemon green - for 'Collaboration' */
+        .badge-license { background: #232526; color: #eab308; border: 1px solid #eab308; }     /* Yellow - for 'License' */
+        .badge-ktu { background: #232526; color: #e04f4f; border: 1px solid #e04f4f; }          /* Red - for 'Platform' */
+        .badge-views { background: #232526; color: #b0b3b8; border: 1px solid #b0b3b8; }        /* Gray - for 'Views' */
+
+        h1 {
+            font-size: 1.7rem;
+            margin-bottom: 0.7rem;
+            background: linear-gradient(90deg, #4ecdc4 0%, #3b82f6 100%); /* Adjusted gradient for DevOps title */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .course-info { /* Renamed to .portfolio-summary for clarity */
+            background: #232526;
+            padding: 1rem;
+            border-radius: 7px;
+            border-left: 4px solid #4ecdc4; /* Changed border color */
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .section {
+            background: #181a1b;
+            border: 1px solid #232526;
+            border-radius: 7px;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #232526 0%, #181a1b 100%);
+            padding: 1rem;
+            border-bottom: 1px solid #232526;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #4ecdc4; /* Adjusted color */
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-content {
+            padding: 1rem;
+        }
+
+        .module { /* Renamed to .project-category or similar for clarity if needed, but keeping for structure */
+            margin-bottom: 1.2rem;
+        }
+
+        .module-title { /* Renamed to .project-category-title */
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            color: #3b82f6; /* Adjusted color */
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .resource-list { /* Renamed to .project-list */
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .resource-item { /* Renamed to .project-item */
+            background: #232526;
+            padding: 0.7rem;
+            border-radius: 5px;
+            border: 1px solid #232526;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: #b0b3b8;
+            font-size: 0.95rem;
+        }
+
+        .resource-item:hover {
+            background: #232526;
+            border-color: #4ecdc4; /* Adjusted hover border color */
+            transform: translateY(-1px) scale(1.01);
+            box-shadow: 0 2px 8px rgba(78,205,196,0.07); /* Adjusted hover shadow color */
+            color: #eaffb0; /* Adjusted hover text color */
+        }
+
+        .resource-icon {
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Updated icon colors for resource/project items */
+        .icon-slides { color: #f97316; } /* Orange for Deployments/Docs */
+        .icon-code { color: #cddc39; } /* Lemon Green for Code/Repos */
+        .icon-app { color: #3b82f6; } /* Blue for Live Demos/Dashboards */
+
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.7rem;
+        }
+
+        .tool-item {
+            background: #232526;
+            padding: 0.7rem;
+            border-radius: 5px;
+            border: 1px solid #232526;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #b0b3b8;
+        }
+
+        .creator-section { /* Renamed to .contact-section */
+            background: linear-gradient(135deg, #232526 0%, #181a1b 100%);
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #232526;
+            margin-top: 1.2rem;
+        }
+
+        .creator-card { /* Renamed to .profile-card */
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .creator-image { /* Renamed to .profile-image */
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #4ecdc4; /* Adjusted border color */
+            object-fit: cover;
+        }
+
+        .creator-info h3 { /* Renamed to .profile-info h3 */
+            color: #4ecdc4; /* Adjusted color */
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .creator-links { /* Renamed to .profile-links */
+            display: flex;
+            gap: 0.7rem;
+            margin-top: 0.5rem;
+        }
+
+        .creator-link { /* Renamed to .profile-link */
+            color: #3b82f6; /* Adjusted color */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .creator-link:hover {
+            color: #cddc39; /* Adjusted hover color */
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.7rem;
+        }
+
+        .overview-item {
+            background: #232526;
+            padding: 1rem;
+            border-radius: 7px;
+            border: 1px solid #232526;
+            text-align: center;
+            transition: transform 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .overview-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .overview-icon {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        /* Colorful icons for overview section - adjusted for DevOps */
+        .overview-item .fa-project-diagram { color: #4ecdc4; } /* Cyan for Projects */
+        .overview-item .fa-code-branch { color: #f59e42; }     /* Orange for CI/CD */
+        .overview-item .fa-server { color: #e04f4f; }          /* Red for Infrastructure */
+        .overview-item .fa-cloud { color: #3b82f6; }           /* Blue for Cloud */
+        .overview-item .fa-chart-line { color: #cddc39; }      /* Green for Monitoring */
+
+
+        /* Colorful module titles - adjusted for DevOps categories */
+        .module-title span[style*="#26a641"] { color: #4ecdc4; } /* CI/CD */
+        .module-title span[style*="#f97316"] { color: #f59e42; } /* IaC */
+        .module-title span[style*="#3b82f6"] { color: #3b82f6; } /* Containerization */
+        .module-title span[style*="#eab308"] { color: #cddc39; } /* Cloud / Automation */
+
+
+        /* Resource icons - adjusted for DevOps content */
+        .icon-slides { color: #e04f4f; } /* Red for Docs/Reports */
+        .icon-code { color: #4ecdc4; } /* Cyan for Code/Scripts */
+        .icon-app { color: #f59e42; } /* Orange for Demos/Live */
+
+        /* Section titles - adjusted gradient colors for a DevOps feel */
+        .section-title {
+            color: #b0ff57;
+            background: linear-gradient(90deg, #4ecdc4, #f59e42, #3b82f6, #cddc39);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Links - adjusted colors */
+        a, a:visited { color: #3b82f6; } /* Blue for links */
+        a:hover { color: #f59e42; }      /* Orange on hover */
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.7rem;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            .badges {
+                justify-content: center;
+            }
+            .creator-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badges">
+                <span class="badge badge-course">Domain: DevOps</span>
+                <span class="badge badge-semester">Focus: Automation</span>
+                <span class="badge badge-status">Status: Active</span>
+                <span class="badge badge-contributions">Explore My Work</span>
+                <span class="badge badge-license">License: MIT</span>
+                <span class="badge badge-ktu">Platform: GitHub Pages</span>
+                <span class="badge badge-views">
+                    <img src="https://visitor-badge.laobi.icu/badge?page_id=harikrishna-t-s.harikrishna-t-s.github.io&left_text=Views" alt="View Count" style="vertical-align: middle; height: 16px;">
+                </span>
+            </div>
+
+            <h1><i class="fas fa-terminal"></i> Harikrishna T S | DevOps Portfolio</h1>
+
+            <div class="course-info">
+                <strong>Passion:</strong> Building robust, scalable, and automated systems.<br>
+                <strong>Expertise:</strong> CI/CD, IaC, Containerization, Cloud, Monitoring, Scripting.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-rocket"></i>
+                    DevOps Expertise Overview
+                </h2>
+            </div>
+            <div class="section-content">
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>
+                            <a href="#featured-projects" style="color:#cddc39;text-decoration:none;">
+                                🚀 Featured Projects
+                            </a>
+                        </h3>
+                        <p>Highlights of my practical work</p>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>
+                            <a href="#cicd" style="color:#cddc39;text-decoration:none;">
+                                🔁 CI/CD Pipelines
+                            </a>
+                        </h3>
+                        <p>Automated build & deployment</p>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>
+                            <a href="#iac" style="color:#cddc39;text-decoration:none;">
+                                🏗️ IaC & Automation
+                            </a>
+                        </h3>
+                        <p>Infrastructure as Code solutions</p>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>
+                            <a href="#containerization" style="color:#cddc39;text-decoration:none;">
+                                🐳 Cloud & Containers
+                            </a>
+                        </h3>
+                        <p>Orchestration with Docker & K8s</p>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>
+                            <a href="#monitoring" style="color:#cddc39;text-decoration:none;">
+                                📊 Monitoring & Logging
+                            </a>
+                        </h3>
+                        <p>Ensuring system health & insights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title" id="featured-projects">
+                    <i class="fas fa-lightbulb"></i>
+                    My DevOps Projects & Solutions
+                </h2>
+            </div>
+            <div class="section-content">
+                <div class="module">
+                    <h3 class="module-title" id="cicd">
+                        <span style="color: #4ecdc4;">🔄</span>
+                        Continuous Integration / Continuous Delivery (CI/CD)
+                    </h3>
+                    <div class="resource-list">
+                        <a href="https://github.com/harikrishna-t-s/your-cicd-project-repo-1" class="resource-item" target="_blank">
+                            <i class="fas fa-code-branch resource-icon icon-code"></i>
+                            <span>Project 1: Automated Deployment with Jenkins & Kubernetes</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s/your-cicd-project-repo-2" class="resource-item" target="_blank">
+                            <i class="fas fa-code-branch resource-icon icon-code"></i>
+                            <span>Project 2: GitLab CI/CD Pipeline for Microservices</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s/your-github-actions-project" class="resource-item" target="_blank">
+                            <i class="fab fa-github-actions resource-icon icon-code"></i>
+                            <span>Project 3: GitHub Actions for Static Site Deployment</span>
+                        </a>
+                         <a href="path/to/your/cicd-process-doc.pdf" class="resource-item" target="_blank">
+                            <i class="fas fa-file-powerpoint resource-icon icon-slides"></i>
+                            <span>Documentation: Best Practices in CI/CD (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3 class="module-title" id="iac">
+                        <span style="color: #f59e42;">🏗️</span>
+                        Infrastructure as Code (IaC) & Automation
+                    </h3>
+                    <div class="resource-list">
+                        <a href="https://github.com/harikrishna-t-s/your-terraform-aws-project" class="resource-item" target="_blank">
+                            <i class="fas fa-cloud-upload-alt resource-icon icon-code"></i>
+                            <span>Project 1: AWS VPC & EC2 Provisioning with Terraform</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s/your-ansible-project" class="resource-item" target="_blank">
+                            <i class="fas fa-server resource-icon icon-code"></i>
+                            <span>Project 2: Ansible Playbooks for Server Configuration</span>
+                        </a>
+                        <a href="path/to/your/cloudformation-template.yaml" class="resource-item" target="_blank">
+                            <i class="fas fa-file-code resource-icon icon-code"></i>
+                            <span>Code Snippet: CloudFormation Template Example</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3 class="module-title" id="containerization">
+                        <span style="color: #3b82f6;">🐳</span>
+                        Containerization & Orchestration
+                    </h3>
+                    <div class="resource-list">
+                        <a href="https://github.com/harikrishna-t-s/your-kubernetes-project" class="resource-item" target="_blank">
+                            <i class="fab fa-docker resource-icon icon-code"></i>
+                            <span>Project 1: Kubernetes Deployment of a Web App</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s/your-docker-compose-project" class="resource-item" target="_blank">
+                            <i class="fas fa-cube resource-icon icon-code"></i>
+                            <span>Project 2: Docker Compose for Multi-Container Apps</span>
+                        </a>
+                        <a href="path/to/your/helm-chart-repo" class="resource-item" target="_blank">
+                            <i class="fas fa-ship resource-icon icon-app"></i>
+                            <span>Helm Chart: Deploying Applications to K8s</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3 class="module-title" id="monitoring">
+                        <span style="color: #cddc39;">📊</span>
+                        Monitoring, Logging & Cloud Platforms
+                    </h3>
+                    <div class="resource-list">
+                        <a href="https://github.com/harikrishna-t-s/your-prometheus-grafana-project" class="resource-item" target="_blank">
+                            <i class="fas fa-chart-area resource-icon icon-app"></i>
+                            <span>Project 1: Prometheus & Grafana Monitoring Setup</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s/your-elk-stack-project" class="resource-item" target="_blank">
+                            <i class="fas fa-search resource-icon icon-code"></i>
+                            <span>Project 2: ELK Stack for Log Aggregation</span>
+                        </a>
+                        <a href="path/to/your/aws-cloud-project-doc.pdf" class="resource-item" target="_blank">
+                            <i class="fas fa-cloud resource-icon icon-slides"></i>
+                            <span>Case Study: Serverless Application on AWS Lambda</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-tools"></i>
+                    My Core DevOps Toolkit
+                </h2>
+            </div>
+            <div class="section-content">
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <i class="fab fa-docker" style="color: #0db7ed;"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-kubernetes" style="color: #326ce5;"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-cloud-upload-alt" style="color: #f05454;"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-server" style="color: #92d881;"></i>
+                        <span>Terraform</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-cogs" style="color: #ee5d38;"></i>
+                        <span>Ansible</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-jenkins" style="color: #d3282b;"></i>
+                        <span>Jenkins</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-gitlab" style="color: #fc6d26;"></i>
+                        <span>GitLab CI/CD</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-github-alt" style="color: #f7b924;"></i>
+                        <span>GitHub Actions</span>
+                    </div>
+                     <div class="tool-item">
+                        <i class="fab fa-linux" style="color: #eab308;"></i>
+                        <span>Linux</span>
+                    </div>
+                     <div class="tool-item">
+                        <i class="fas fa-chart-bar" style="color: #b0ff57;"></i>
+                        <span>Prometheus</span>
+                    </div>
+                     <div class="tool-item">
+                        <i class="fas fa-chart-pie" style="color: #3b82f6;"></i>
+                        <span>Grafana</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-file-code" style="color: #4ecdc4;"></i>
+                        <span>Python/Bash</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="creator-section">
+            <h2 class="section-title" style="margin-bottom: 2rem;">
+                <i class="fas fa-id-card-alt"></i>
+                Connect With Me
+            </h2>
+            <div class="creator-card">
+                <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID?v=4" alt="Harikrishna T S" class="creator-image">
+                <div class="creator-info">
+                    <h3>👨‍💻 Harikrishna T S</h3>
+                    <p>DevOps Engineer | Cloud Enthusiast | Automation Advocate</p>
+                    <p>Building and optimizing resilient systems with code.</p>
+                    <div class="creator-links">
+                        <a href="mailto:your_email@example.com" class="creator-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>your_email@example.com</span>
+                        </a>
+                        <a href="https://github.com/harikrishna-t-s" class="creator-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/your-linkedin-profile/" class="creator-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
