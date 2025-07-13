@@ -1,13 +1,13 @@
 title: "Harikrishna T S | DevOps Portfolio"
 description: "Showcasing projects and expertise in DevOps, CI/CD, IaC, Containerization, and Cloud technologies."
-url: "https://harikrishna-t-s.github.io" # Your GitHub Pages URL
+url: "https://harikrishna-t-s.github.io/portfolio" # Your GitHub Pages URL
 baseurl: "" # leave empty if deploying at root (which is recommended for a user page)
 
 remote_theme: pages-themes/slate@v0.2.0 # Keeping the theme as requested
 
 repository: harikrishna-t-s/harikrishna-t-s.github.io # IMPORTANT: This should be your username/username.github.io
 
-logo: "/assets/logo.png" # You can add your logo here if desired, otherwise remove this line or point to an existing one
+logo: "" # You can add your logo here if desired, otherwise remove this line or point to an existing one
 
 author:
   name: "Harikrishna T S"
