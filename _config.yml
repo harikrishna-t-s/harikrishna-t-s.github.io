@@ -1,5 +1,34 @@
-title: Shaw Talebi
-#logo: /assets/img/headshot_circle.png
-#description: text below image
-show_downloads: true
-theme: jekyll-theme-minimal
+title: "Harikrishna T S | DevOps Portfolio"
+description: "Showcasing projects and expertise in DevOps, CI/CD, IaC, Containerization, and Cloud technologies."
+url: "https://harikrishna-t-s.github.io" # Your GitHub Pages URL
+baseurl: "" # leave empty if deploying at root (which is recommended for a user page)
+
+remote_theme: pages-themes/slate@v0.2.0 # Keeping the theme as requested
+
+repository: harikrishna-t-s/harikrishna-t-s.github.io # IMPORTANT: This should be your username/username.github.io
+
+logo: "/assets/logo.png" # You can add your logo here if desired, otherwise remove this line or point to an existing one
+
+author:
+  name: "Harikrishna T S"
+  email: "your_email@example.com" # Replace with your actual email
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+google_analytics: "" # add tracking ID if needed (e.g., UA-XXXXXXXXX-Y)
+
+# Footer settings
+footer_content: "Connect with me on GitHub, explore my projects, and learn about my DevOps journey."
+
+# Optional navigation links (enable when you add pages)
+# header_pages:
+#   - index.md
+#   - about.md
+#   - contact.md
