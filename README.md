@@ -1,53 +1,84 @@
-# Data Scientist
+# 🚀 Harikrishna T S | DevOps Portfolio
 
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+Welcome to my DevOps portfolio! This space serves as a comprehensive showcase and documentation of my work, projects, and expertise in the DevOps domain. I am passionate about automating workflows, building robust CI/CD pipelines, and ensuring seamless software delivery.
 
-## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+---
 
-## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+## 🎯 About Me
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+With a strong foundation in various DevOps methodologies and tools, I focus on bridging the gap between development and operations to enhance efficiency, reliability, and speed. My goal is to contribute to resilient and scalable systems through effective infrastructure management and automation.
 
-## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+---
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+## ✨ What You'll Find Here
 
+This portfolio highlights my hands-on experience and projects across key DevOps areas:
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+* **Continuous Integration/Continuous Delivery (CI/CD):** Designing, implementing, and optimizing pipelines for automated builds, tests, and deployments.
+* **Infrastructure as Code (IaC):** Managing and provisioning infrastructure through code for consistency and scalability.
+* **Containerization & Orchestration:** Utilizing container technologies and orchestrators for efficient application deployment and management.
+* **Monitoring & Logging:** Implementing solutions to gain insights into system performance and troubleshoot issues effectively.
+* **Scripting & Automation:** Automating repetitive tasks and workflows to improve operational efficiency.
+* **Cloud Platforms:** Working with various cloud providers to deploy and manage applications and infrastructure.
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+---
 
+## 🛠️ My DevOps Toolkit
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+Here are some of the technologies and tools I frequently work with:
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+* **CI/CD:** Jenkins, GitLab CI/CD, GitHub Actions, ArgoCD
+* **Cloud:** AWS, Azure, Google Cloud Platform (GCP)
+* **Containerization:** Docker, Kubernetes, OpenShift
+* **IaC:** Terraform, Ansible, CloudFormation
+* **Scripting:** Python, Bash, Groovy
+* **Monitoring & Logging:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Splunk
+* **Version Control:** Git, GitHub
+* **Operating Systems:** Linux (Ubuntu, CentOS, RHEL), Windows Server
+* **Networking:** VPC, DNS, Load Balancers, Firewalls
 
-## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+---
 
-- [Data Science Blog](https://medium.com/@shawhin)
+## 📂 Featured Projects
+
+Here are some of my key projects demonstrating my DevOps capabilities. Click on the project titles to explore their respective GitHub repositories.
+
+*(**Instructions:** Replace these placeholders with actual links and brief descriptions of your projects. Aim for 3-5 strong projects initially. If a project isn't on GitHub yet, consider creating a dedicated repository for its documentation and code snippets.)*
+
+1.  **[Project Title 1: E.g., Automated CI/CD Pipeline for a Web Application]**
+    * **Description:** Implemented a full CI/CD pipeline from commit to deployment using `[Tools Used: e.g., Jenkins, Docker, Kubernetes, AWS EKS]`. This project showcases `[Key Achievements: e.g., automated testing, blue/green deployments, zero-downtime updates]`.
+    * **Technologies:** `[List specific technologies: e.g., Jenkins, Docker, Kubernetes, Nginx, Python, AWS EC2, ECR, EKS]`
+    * **Repository:** [Link to Project 1 GitHub Repository]
+
+2.  **[Project Title 2: E.g., Infrastructure Provisioning with Terraform on AWS]**
+    * **Description:** Developed Terraform configurations to provision and manage `[Specific Infrastructure: e.g., VPC, EC2 instances, RDS databases, S3 buckets]` on `[Cloud Provider: e.g., AWS]`. Demonstrates modular design and state management.
+    * **Technologies:** `[List specific technologies: e.g., Terraform, AWS VPC, EC2, RDS, S3]`
+    * **Repository:** [Link to Project 2 GitHub Repository]
+
+3.  **[Project Title 3: E.g., Kubernetes Cluster Setup and Application Deployment]**
+    * **Description:** Set up a highly available Kubernetes cluster `[On-premise/Cloud: e.g., using kubeadm on VMs or EKS/AKS/GKE]` and deployed a multi-tier application using Helm charts. Focus on `[Key Concepts: e.g., scaling, service discovery, persistent storage]`.
+    * **Technologies:** `[List specific technologies: e.g., Kubernetes, Helm, Docker, YAML, Prometheus, Grafana]`
+    * **Repository:** [Link to Project 3 GitHub Repository]
+
+4.  **[Project Title 4: E.g., Configuration Management with Ansible]**
+    * **Description:** Created Ansible playbooks to automate the setup and configuration of `[Target Systems: e.g., Linux servers, web servers (Nginx/Apache), database instances]`. Emphasizes idempotency and role-based management.
+    * **Technologies:** `[List specific technologies: e.g., Ansible, Linux, Nginx, MySQL]`
+    * **Repository:** [Link to Project 4 GitHub Repository]
+
+---
+
+## 📈 My Contributions & Learning
+
+I actively engage in continuous learning and contribute to open-source where possible. Check out my GitHub profile for more insights into my activity and other repositories.
+
+---
+
+## 📬 Get in Touch
+
+Feel free to connect with me!
+
+* **GitHub:** [https://github.com/harikrishna-t-s](https://github.com/harikrishna-t-s)
+* **LinkedIn:** [Your LinkedIn Profile URL] *(**Instructions:** Replace with your actual LinkedIn URL)*
+* **Email:** [Your Email Address] *(**Instructions:** Replace with your actual email address)*
+
+---
